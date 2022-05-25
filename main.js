@@ -13,6 +13,20 @@ At the start of the game, the player will choose one of the three objects availa
 The computer will also randomly select an object, and the two hands will be compared. A winner will be announced.
 */
 
+// Function to write text before game starts
+let i = 0;
+let txt = 'Rock, Paper, Scissors';
+let speed = 50;
+
+function typeWriter() {
+    if (i < txt.length) {
+        document.getElementById("newGame").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+    }
+}
+
+typeWriter();
 
 function computerPlay(myArray) {
   const randomIndex = Math.floor(Math.random() * myArray.length);
@@ -47,9 +61,9 @@ function playGame(x,y) {
   console.log('Score: ' + playerScore + " x " + computerScore);
 }
 
-for (let i = 0; i < 5; i++) {
-  playGame();
-}
+// for (let i = 0; i < 5; i++) {
+//   playGame();
+// }
 
 
 
