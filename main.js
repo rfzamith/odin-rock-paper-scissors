@@ -76,7 +76,7 @@ function startMessage() {
   playerSco.innerHTML = 'Score: ' + playerScore;
   computerSco.innerHTML = 'Score: ' + computerScore;
   msg.innerHTML = 'Pick an object and start playing!';
-  startButton.innerHTML = '<a href="#">Restart game</a>';
+  startButton.innerHTML = '<a href="javascript:void(0)">Restart game</a>';
   playerRock.addEventListener('click', pickRock);
   playerPaper.addEventListener('click', pickPaper);
   playerScissors.addEventListener('click', pickScissors);
