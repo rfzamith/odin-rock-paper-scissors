@@ -80,7 +80,7 @@ function clearAllObjects() {
 }
 
 function myTimeout() {
-  t = setTimeout(clearAllObjects, 1000);
+  t = setTimeout(clearAllObjects, 500);
 }
 function stopTimeout() {
   clearTimeout(t);
