@@ -47,6 +47,9 @@ const computerPaper = document.querySelector('.paper2');
 const computerScissors = document.querySelector('.scissors2');
 const playerSco = document.querySelector('.playerScore');
 const computerSco = document.querySelector('.computerScore');
+const msg = document.querySelector('.message');
+const startButton = document.querySelector('.button');
+
 
 // playRound();
 
@@ -56,18 +59,22 @@ const computerSco = document.querySelector('.computerScore');
 //   }
 // }
 
-playerRock.addEventListener('click', pickRock);
-playerPaper.addEventListener('click', pickPaper);
-playerScissors.addEventListener('click', pickScissors);
+startButton.addEventListener('click', startMessage);
 
-function pickRock(e) {
+function pickRock() {
   playGame('rock',computerPlay(objects));
 }
-function pickPaper(e) {
+function pickPaper() {
   playGame('paper',computerPlay(objects));
 }
-function pickScissors(e) {
+function pickScissors() {
   playGame('scissors',computerPlay(objects));
+}
+function startMessage() {
+  msg.innerHTML = 'Pick an object and start playing!';
+  playerRock.addEventListener('click', pickRock);
+  playerPaper.addEventListener('click', pickPaper);
+  playerScissors.addEventListener('click', pickScissors);
 }
 
 function clearAllObjects() {
@@ -80,7 +87,7 @@ function clearAllObjects() {
 }
 
 function myTimeout() {
-  t = setTimeout(clearAllObjects, 500);
+  t = setTimeout(clearAllObjects, 700);
 }
 function stopTimeout() {
   clearTimeout(t);
@@ -92,17 +99,17 @@ function playGame(x,y) {
     playerRock.classList.value = 'rock-selected';
     myTimeout();
     if(y == 'rock') {
-      console.log('Rock vs Rock! It\'s a tie!');
+      msg.innerHTML = 'Rock vs Rock. It\'s a tie!';
       computerRock.classList.value = 'rock-selected2';
     }
     if(y == 'paper') {
-      console.log('Rock vs Paper! You lost!');
+      msg.innerHTML = 'Rock vs Paper. You lost!';
       computerPaper.classList.value = 'paper-selected2';
       computerScore++;
       computerSco.innerHTML = 'Score: ' + computerScore;
     }
     if(y == 'scissors') { 
-      console.log('Rock vs Scissors! You won!');
+      msg.innerHTML = 'Rock vs Scissors. You won!';
       computerScissors.classList.value = 'scissors-selected2';
       playerScore++; 
       playerSco.innerHTML = 'Score: ' + playerScore;
@@ -112,17 +119,17 @@ function playGame(x,y) {
     playerPaper.classList.replace('paper','paper-selected');
     myTimeout();
     if(y == 'paper') { 
-      console.log('Paper vs Paper! It\'s a tie!');
+      msg.innerHTML = 'Paper vs Paper. It\'s a tie!';
       computerPaper.classList.value = 'paper-selected2';
     }
     if(y == 'scissors') { 
-      console.log('Paper vs Scissors! You lost!');
+      msg.innerHTML = 'Paper vs Scissors. You lost!';
       computerScissors.classList.value = 'scissors-selected2';
       computerScore++;
       computerSco.innerHTML = 'Score: ' + computerScore;
      }
     if(y == 'rock') { 
-      console.log('Paper vs Rock! You won!');
+      msg.innerHTML = 'Paper vs Rock. You won!';
       computerRock.classList.value = 'rock-selected2';
       playerScore++;
       playerSco.innerHTML = 'Score: ' + playerScore;
@@ -132,17 +139,17 @@ function playGame(x,y) {
     playerScissors.classList.replace('scissors','scissors-selected');
     myTimeout();
     if(y == 'scissors') { 
-      console.log('Scissors vs Scissors! It\'s a tie!'); 
+      msg.innerHTML = 'Scissors vs Scissors. It\'s a tie!'; 
       computerScissors.classList.value = 'scissors-selected2';
     }
     if(y == 'rock') { 
-      console.log('Scissors vs Rock! You lost!'); 
+      msg.innerHTML = 'Scissors vs Rock. You lost!'; 
       computerRock.classList.value = 'rock-selected';
       computerScore++;
       computerSco.innerHTML = 'Score: ' + computerScore;
     }
     if(y == 'paper') { 
-      console.log('Scissors vs Paper! You won!'); 
+      msg.innerHTML = 'Scissors vs Paper. You won!'; 
       computerPaper.classList.value = 'paper-selected2';
       playerScore++; 
       playerSco.innerHTML = 'Score: ' + playerScore;
