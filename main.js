@@ -15,7 +15,7 @@ The computer will also randomly select an object, and the two hands will be comp
 
 // Function to write text before game starts
 let i = 0;
-let txt = 'Rock, Paper, Scissors';
+let txt = 'Rock Paper Scissors';
 let speed = 50;
 
 function typeWriter() {

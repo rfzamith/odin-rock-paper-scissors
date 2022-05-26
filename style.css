@@ -5,17 +5,16 @@ body {
   color: #ffffff;
   background-image: linear-gradient( 115deg, rgba(17, 23, 32, 0.7), rgba(17, 23, 32, 0.7) ), url(./images/background.jpeg);
   background-size:cover;
-  
+
 }
 
 h1 {
-  width: 800px;
+  width: 900px;
   max-width: 80%;
   text-align: center;
   margin: 0 auto;
-  font-weight: 400;
   font-size: 36px;
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Press Start 2P', Open Sans;
   padding-bottom:40px;
 }
 
@@ -45,13 +44,13 @@ h1 {
   }
 }  
 .grid-2-col .title {
-  font-family: 'Poppins', cursive;
+  font-family: Open Sans, Arial, sans-serif;
   font-size: 30px;
   text-transform: uppercase;
   font-weight: 600;
 }
 .grid-2-col .sub-title {
-  font-family: 'Poppins', cursive;
+  font-family: Open Sans, Arial, sans-serif;
   font-size: 15px;
   text-transform: uppercase;
   font-weight: 600;
@@ -91,7 +90,7 @@ h1 {
 }
 
 .main-section {
-	width: 700px;
+	width: 900px;
   max-width: 80%;
 	margin: 0 auto;
   padding: 4%;
