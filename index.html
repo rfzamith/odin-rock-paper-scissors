@@ -8,9 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/2f927fc7f2.js" crossorigin="anonymous"></script>
-  
 </head>
 
 <h1 id="newGame"></h1>
@@ -18,15 +17,18 @@
 <!-- <div class="main-section"> -->
 
   <div class="grid-2-col">
-    <div class="box one"><h2>Player</h2>
-      <div class="grid-2-col">
-        <div class="inner-box one">
-          <i class="fa-regular fa-user-cowboy"></i>
+    <div class="box one"><p class="title">Player</p>
+          <i class="fa-solid fa-user-ninja"></i>
+          <p class="sub-title">Score: 0</p>
+      <div class="grid-3-col">
+        <div class="object-box"><p class="sub-title">Rock</p>
+          <p><i class="fa-solid fa-hand-back-fist"></i></p>
         </div>
-        <div class="inner-box two">
-            <p class="score" id="playerscore">Score: 0</p>
-        </div>
-    </div>
+        <div class="object-box"><p class="sub-title">Paper</p>
+        <p><i class="fa-solid fa-hand"></i></p></div>
+        <div class="object-box"><p class="sub-title">Scissors</p>
+        <p><i class="fa-solid fa-hand-scissors"></i></p></div>
+      </div>
     </div>
     <div class="box two">Computer</div>
   </div>

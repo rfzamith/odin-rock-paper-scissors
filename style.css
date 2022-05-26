@@ -13,16 +13,11 @@ h1 {
   text-align: center;
   margin: 0 auto;
   font-weight: 400;
-  font-size: 34px;
+  font-size: 36px;
   font-family: 'Press Start 2P', cursive;
-  padding-bottom:20px;
+  padding-bottom:40px;
 }
-.title {
-  font-family: 'Press Start 2P', cursive;
-  text-align: center;
-  font-size: 18px;
-  padding: 0px 20px 0px;
-}
+
 @media screen and (min-width: 769px) {
   .grid-2-col {
     display: grid;
@@ -33,17 +28,37 @@ h1 {
     max-width:900px;
     margin:0 auto;
   }
+  .grid-3-col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
+    margin:0 auto;
+  }
 }
 @media screen and (max-width: 768px) {
-  .grid-2-col {
+  .grid-2-col, .grid-3-col {
         display: block;
         padding: 15px;
   }
 }  
+.grid-2-col .title {
+  font-family: 'Poppins', cursive;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.grid-2-col .sub-title {
+  font-family: 'Poppins', cursive;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
 .box {
   background-color: rgb(27,27,50,0.8);
   border-radius: 5px;
-  padding: 40px 20px;
+  padding: 20px 20px 40px 20px;
   text-align: center;
 }
 .box one { 
@@ -52,16 +67,14 @@ h1 {
 .box two { 
   grid-area: 1 / 2 / 2 / 3;
 }
-.inner-box one {
-
+.info-box {
 }
-.inner-box two {
-
+.object-box {
+  background: #ffffff;
+  color: #333;
 }
-
-.box h2 {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 15px;
+.fa-solid {
+  font-size: 50px;
 }
 #description {
   font-style: italic;
