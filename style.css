@@ -11,7 +11,7 @@ body {
 header {
   margin: 0 auto;
   /* background: #00afc4; */
-  padding: 6% 0 4% 0;
+  padding: 7% 0 3% 0;
   text-align: center;
   overflow: hidden;
   /* background-color: #00afc4; */
@@ -19,7 +19,7 @@ header {
 h1 {
   text-align: center;
   margin: 0 auto;
-  font-size: 28px;
+  font-size: 34px;
   font-family: 'Press Start 2P', Open Sans;
 }
 
